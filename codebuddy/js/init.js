@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             escapeBtn.addEventListener('click', function(event) {
                 // Permite a navegação para a página de escape room
-                window.location.href = "/Escape Room/index.html"; 
+                window.location.href = "/codebuddy/html/escaperoom.html"; 
             });
         } else { 
             openPopupBtn.style.display = 'block'; 

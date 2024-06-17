@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
       targetIndex = gameState.user.position - gameState.diceNum;
       changeRegularContent(
         "São necessárias três peças para desbloquear o caminho",
-        "Assets/lock_popup.png"
+        "/codebuddy/images/escaperoom/Assets/lock_popup.png"
       );
     } else if (
       targetIndex === 0 &&
@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
     gameState.hasShield = true;
     changeRegularContent(
       "Recebeste um escudo, estás protegido de perder peças",
-      `Assets/shield_popup.png`
+      `/codebuddy/images/escaperoom/Assets/shield_popup.png`
     );
   }
 
@@ -396,7 +396,7 @@ document.addEventListener("DOMContentLoaded", function () {
           piecesNum.innerHTML = gameState.user.pieces;
           changeRegularContent(
             "Acertaste na resposta e ganhase uma peça",
-            `Assets/piece_popup.png`
+            `/codebuddy/images/escaperoom/Assets/piece_popup.png`
           );
 
           if (gameState.user.pieces === 3) {
@@ -408,7 +408,7 @@ document.addEventListener("DOMContentLoaded", function () {
           shieldsNum.innerHTML = gameState.user.shields;
           changeRegularContent(
             "Falhaste a resposta mas como estavas protegido pelo escudo não perdeste peças",
-            `Assets/sad_face.png`
+            `/codebuddy/images/escaperoom/Assets/sad_face.png`
           );
           gameState.hasShield = false;
         } else if (gameState.user.pieces !== 0) {
@@ -416,7 +416,7 @@ document.addEventListener("DOMContentLoaded", function () {
           piecesNum.innerHTML = gameState.user.pieces;
           changeRegularContent(
             "Falhaste a resposta e perdeste uma peça ",
-            `Assets/sad_face.png`
+            `/codebuddy/images/escaperoom/Assets/sad_face.png`
           );
         }
         unlockPath();
@@ -430,28 +430,28 @@ document.addEventListener("DOMContentLoaded", function () {
   function unlockPath() {
     const padlock = document.querySelector(".padlock");
     if (gameState.user.pieces === 3 && blockedPath) {
-      changeRegularContent("Desbloqueaste o caminho", `Assets/unlock.png`);
-      padlock.src = `Assets/unlock_popup.png`;
+      changeRegularContent("Desbloqueaste o caminho", `/codebuddy/images/escaperoom/Assets/unlock.png`);
+      padlock.src = `/codebuddy/images/escaperoom/Assets/unlock_popup.png`;
     }
   }
 
   function handleTipCell() {
     changeRegularContent(
       "Recebeste uma dica para o próximo desafio",
-      "Assets/tip_popup.png"
+      "/codebuddy/images/escaperoom/Assets/tip_popup.png"
     );
 
     gameState.user.tips++;
     elements.tipNum.innerHTML = gameState.user.tips;
     gameState.tip = true;
-    elements.tipImg.src = "Assets/tip_popup.png";
+    elements.tipImg.src = "/codebuddy/images/escaperoom/Assets/tip_popup.png";
   }
 
   function openTip(selectedTip) {
     elements.tipImg.addEventListener(
       "click",
       () => {
-        changeRegularContent(selectedTip, 'Assets/exclamation_point.png');
+        changeRegularContent(selectedTip, '/codebuddy/images/escaperoom/Assets/exclamation_point.png');
         if (gameState.user.tips > 0) {
           gameState.user.tips--;
           elements.tipNum.innerHTML = gameState.user.tips;
@@ -477,7 +477,7 @@ document.addEventListener("DOMContentLoaded", function () {
     targetCell.style.fontSize = "30px";
     styleCell(targetCell, false);
 
-    changeRegularContent("Desbloqueaste o caminho !", `Assets/unlock_popup.png`);
+    changeRegularContent("Desbloqueaste o caminho !", `/codebuddy/images/escaperoom/Assets/unlock_popup.png`);
 
     movingForward = true;
     elements.input.value = "";
@@ -507,12 +507,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (minutes < 10) {
       changeRegularContent(
         "Concluiste o jogo em menos de 1o minutos e recebeste uma medalha dourada",
-        "Assets/first_trophy.png"
+        "/codebuddy/images/escaperoom/Assets/first_trophy.png"
       );
     } else if (minutes => 10 && minutes <= 20) {
-      changeRegularContent("Ganhaste uma medalha dourada pelo tempo que demoraste a concluir o jogo", "Assets/second_trophy.png");
+      changeRegularContent("Ganhaste uma medalha dourada pelo tempo que demoraste a concluir o jogo", "/codebuddy/images/escaperoom/Assets/second_trophy.png");
     } else {
-      changeRegularContent("Concluiste o jogo e ganhaste uma medalha de bronze", "Assets/third_trophy.png");
+      changeRegularContent("Concluiste o jogo e ganhaste uma medalha de bronze", "/codebuddy/images/escaperoom/Assets/third_trophy.png");
     }
   }
 

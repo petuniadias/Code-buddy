@@ -79,68 +79,16 @@ body{
     margin-left: 20px;
 } 
 
-                         /* ACCORDIAN */
-
-.accordion_container {
-    flex-direction: row; 
-    display: flex;
-    justify-content: space-evenly; 
-    
-}
-
-.accordion{  
-   font-family: Space Mono;  
-   font-style: normal;  
-   padding-bottom: 5%; 
-          
-}  
-
-.accordion_btn{  
-    border-style: solid;  
-    border-radius:20px; 
-    color: white;  
-    background-color: black;
-    width: 300px; 
-    height: 65px; 
-    font-family: Space Mono;  
-    font-style: normal;   
-    font-size: 24px; 
-    margin: ;
-} 
-.accordion_btn:hover{ 
-    background-color:#969695 ; 
-    border-color: #969695;
-}
-
-.content{  
-    margin-top: 3%; 
-    margin-left: 10%; 
-    margin-right: 10%;  
-    display: none; 
-    font-size: 30px   
-}
-
-.active{ 
-    display: block;
-} 
-
-.close_btn{ 
-    border-style: solid; 
-    border-radius: 50%; 
-    border-color: #D9D9D9; 
-    background-color: #D9D9D9;  
-    margin-bottom: 3%;
-} 
 
                      /* GALERIA */
 
 .events_container{ 
     display: flex; 
     align-items: baseline;   
-    padding-left: 5%;
-                        
+    padding-left: 5%;  
+    
 }  
-                    
+
 .events_titles{  
     font-family: Jura; 
     font-size: 50px; 
@@ -149,99 +97,34 @@ body{
     background-color: #F39414;
 } 
 
+
 .events_content{ 
     padding-left: 5%;  
     font-family: Space Mono; 
     font-size: 24px; 
 }  
 
-#project-show {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: auto 100px;
-    gap: 20px;
-    min-width: 400px;
+.feed{   
+    padding-left: 5%;
+    display: grid;  
+    grid-auto-flow: column; 
+    grid-auto-columns: 48%; 
+    overflow-x: auto; 
+    overscroll-behavior-inline:contain ; 
+    padding-bottom: 5%; 
+    scrollbar-width: none; /* Oculta a barra  no Firefox */
+    -ms-overflow-style: none; /* Oculta a barra no Internet Explorer e Edge */
 }
-                    
-#project-show > .slide {
-    display: block;
-    width: calc(50% - (20px / 2));
-    position: relative;
-} 
-                    
-#project-show .content {
-    display: none;
-    margin: 0;
-    overflow: hidden;
-    height: calc(250px - 10px * 2 - 10px);
-    border: 2px solid #000;
-    border-right-width: 8px;
-    border-bottom-width: 8px;
-    border-radius: 15px;
-    padding: 20px;
+ 
+.feed::-webkit-scrollbar {
+    display: none; /* Oculta a barra no Chrome e Safari */
 }
-                    
-#project-show .dark .content {
-    color: #fff;
-    background-color: #161616;
-}
-                    
-#project-show .content > h1 {
-    margin: 0;
-    font-size: x-large;
-    font-weight: bold;
-    font-family: sans-serif;
-}
-                    
-#project-show .loop-arrow {
-    display: flex;
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #000;
-    color: #fff;
-    z-index: 100;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    filter: drop-shadow(1px 1px 1px black);
-}
-                    
-#project-show .dark .loop-arrow {
-    background-color: #f5f5f5;
-    filter: drop-shadow(1px 1px 1px white);
-}
-                    
-#project-show .dark .loop-arrow svg {
-    filter: invert(1);
-}
-                    
-#project-show .loop-arrow:hover {
-    filter: none;
-    opacity: 0.8;
-    margin-right: -1px;
-    margin-bottom: -1px;
-}
-                    
-#project-show .loop-arrow > svg {
-    width: 24px;
-    height: 24px;
-}
-                    
-#project-show .content.active {
-    display: block;
-    animation: fadeIn 0.5s;
-}
-                    
-#project-show .content.desacative {
-    animation: fadeOut 0.5s;
-}
+ 
+.projects{ 
+    padding: 5%; 
+    display: grid; 
+    padding: 5%;     
+}  
 
                           /* ESCAPE ROOM */
 
