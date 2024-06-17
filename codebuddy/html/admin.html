@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="/codebuddy/css/admin.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap"rel="stylesheet"  />  
+    <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>  
+    <link href='https://fonts.googleapis.com/css?family=Space Mono' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body> 
+    <header> 
+        <img class="logo" src="/codebuddy/images/header_logo.png" alt=""> 
+        <a href="/codebuddy/index.html"><button class="homeBtn"><img src="/codebuddy/images/back_home.png" alt=""></button></a> 
+    </header> 
+
+                            <!-- user -->
+    <div>  
+        <label class="admin_users" for="">User's:</label>
+        <table class="tabela"> 
+            <thead>
+                <tr class="header"> 
+                    <th>Username</th> 
+                    <th>E-mail</th> 
+                    <th>Estado</th> 
+                    <th>Pontos</th> 
+                </tr>
+            </thead>
+            <tbody> 
+            </tbody> 
+        </table>
+    </div> 
+
+    <div class="btns_admin"> 
+        <button class="control_btn" id="send_message">Enviar notificação</button> 
+        <button class="control_btn" id="block_user">Bloquear</button> 
+        <button class="control_btn" id="unblock_user">Desbloquear</button> 
+        <button class="control_btn" id="delete_account">Apagar conta</button>
+    </div>  
+
+    <!-- enviar uma notificação --> 
+    <div id="message_popup" class="message_popup">  
+        <div class="message" id="frmMessage">  
+          <form id="messageForm" action="form" method="post"> 
+            <label class="message_title" for="">Envie uma Mensagem</label>
+            <textarea class="write_area" name="messageContent" id="messageContent"></textarea> 
+            <div class="message_btns"> 
+              <button class="btn_sendNot" type="submit">Enviar</button> 
+              <button class="btn_sendNot" type="reset">Apagar</button>
+            </div>
+          </form>
+        </div>
+    </div>
+ 
+
+                    <!-- publicar trabalhos --> 
+
+
+    <label class="post_title" for="">Adicione Post's:</label>
+    <div class="post_container">   
+        <div class="add_photo"> 
+            <input type="file" id="imagem" name="imagem" accept="image/*" required>
+        </div> 
+        <div class="notif_form"> 
+            <input class="post_inputs" type="text" name="Legenda" value=" Legenda:" id="" aria-required=""> 
+            <input class="post_inputs" type="url" name="" value = " Link:" id=""> 
+        </div>  
+    </div>
+        <div class="post_btns"> 
+            <button class="add_post_btn">Adicionar</button> 
+            <button class="add_post_btn">Eleminar</button>
+        </div> 
+    
+    <div>      
+        <table class="tabela_post"> 
+            <tr class="header">  
+                <th>Img </th> 
+                <th>Legenda</th> 
+                <th>Descrição</th> 
+            </tr>  
+            <tr class="data"> 
+                <th>2024-02-29</th> 
+                <th>Corrida</th> 
+                <th>10</th> 
+            </tr> 
+            <tr class="data"> 
+                <th>2024-03-02</th> 
+                <th>Corrida</th> 
+                <th>8</th> 
+            </tr>  
+            <tr class="data"> 
+                <th>2024-02-29</th> 
+                <th>Corrida</th> 
+                <th>10</th> 
+            </tr> 
+            <tr class="data"> 
+                <th>2024-02-29</th> 
+                <th>Corrida</th> 
+                <th>10</th> 
+            </tr> 
+            <tr class="data"> 
+                <th>2024-02-29</th> 
+                <th>Corrida</th> 
+                <th>10</th> 
+            </tr>
+            
+        </table>
+    </div>  
+
+                     <!-- perguntas escape room --> 
+    <label class="questions_title" for=""> Perguntas Escaperoom:</label>  
+    <div class="question_container">  
+        <div class="questions_form">  
+            <input class="input_question" type="text" name="" id="" value=" Pergunta:"> 
+            <input class="input_corretOp" type="text" value=" Resposta certa:">
+        </div> 
+        <div class="question_view">  
+            <table class="tabela_questions"> 
+                <tr class="header">  
+                    <th>Img </th> 
+                    <th>Legenda</th> 
+                    <th>Descrição</th> 
+                </tr>  
+                <tr class="data"> 
+                    <th>2024-02-29</th> 
+                    <th>Corrida</th> 
+                    <th>10</th> 
+                </tr> 
+                <tr class="data"> 
+                    <th>2024-03-02</th> 
+                    <th>Corrida</th> 
+                    <th>8</th> 
+                </tr>  
+                <tr class="data"> 
+                    <th>2024-02-29</th> 
+                    <th>Corrida</th> 
+                    <th>10</th> 
+                </tr> 
+                <tr class="data"> 
+                    <th>2024-02-29</th> 
+                    <th>Corrida</th> 
+                    <th>10</th> 
+                </tr> 
+                <tr class="data"> 
+                    <th>2024-02-29</th> 
+                    <th>Corrida</th> 
+                    <th>10</th> 
+                </tr> 
+            </table>
+        </div>
+    </div>   
+    <div class="post_btns"> 
+        <button class="add_post_btn">Adicionar</button> 
+        <button class="add_post_btn">Eleminar</button>
+    </div>  
+
+    <footer class="footer">  
+        <img class="img_footer" src="/codebuddy/images/logo_footer.png" alt="">
+    </footer>
+
+
+    
+    <script  type="module" src="/codebuddy/js/admin.js"></script>  
+
+</body>
+</html>

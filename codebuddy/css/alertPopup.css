@@ -1,0 +1,29 @@
+.alert_content{
+    background-color: #D9D9D9;
+    height: 150px; 
+    width: 40%;
+    margin: 10% auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px 30px 10px 30px;
+    font-size : 20px;
+} 
+
+.closePopupAlert{  
+    align-self:center;  
+    background-color: black; 
+    color: white;
+    font-family: Space Mono; 
+    font-size: 16px;
+    border-radius: 13px; 
+    border-color: black; 
+    border-style: solid;  
+    border-width: 1px;
+    width: 150px; 
+    margin: 1%; 
+    padding: 15px;
+}
