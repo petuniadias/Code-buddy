@@ -9,11 +9,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const userPopup = document.getElementById('userPopup'); 
     const greeting = document.getElementById('greeting'); 
     const logoutBtn = document.getElementById('logoutBtn'); 
-    const escapeBtn = document.querySelector('.escape_btn');
+    const escapeBtn = document.querySelector('.escape_btn'); 
+    const popupAlert =document.getElementById('popup_challenge');
 
     // Esconder o dash do user 
-    userPopup.style.display = 'none';
-
+    userPopup.style.display = 'none'; 
+    
     // Iniciar os users
     User.init(); 
 
@@ -142,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }); 
 
     // alert popup  
-    popup.style.display = 'none';
+    
     function showPopupAlert(message) {
         return new Promise((resolve) => {
             const popup = document.getElementById('popup_challenge');
