@@ -8,10 +8,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const unblockUserBtn = document.getElementById('unblock_user');
     const messageForm = document.getElementById('messageForm');
     const messageContent = document.getElementById('messageContent');
+    
+    function showPopupAlert(message, icon = 'success') {
+        return Swal.fire({
+            text: message,
+            icon: icon,
+            confirmButtonText: 'OK', 
+            customClass: {
+                popup: 'my-custom-popup',
+                title: 'my-custom-title',
+                content: 'my-custom-content',
+                confirmButton: 'my-custom-confirm-button',
+                cancelButton: 'my-custom-cancel-button'
+            }
+        });
+    }
 
     openSendNotif.addEventListener('click', function() { 
         messagePopup.style.display = 'block';
-    }); 
+    });  
 
     window.addEventListener('click', function(event) { 
         if (event.target == messagePopup) { 
@@ -26,8 +41,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ADMIN 
     if (!User.isLogged() || !User.getUserLogged().isAdmin) { 
-        alert('Acesso negado'); 
-        window.location.href = '/codebuddy/index.html'; 
+        showPopupAlert('Acesso negado', 'error').then(() => {
+            window.location.href = '/codebuddy/index.html'; 
+        });
         return;
     }
 
@@ -81,49 +97,97 @@ function loadUsersToTable() {
 function deleteUser() { 
     const selectedUser = document.querySelector('input[name="selectedUser"]:checked');
     if (!selectedUser) {
-        alert('Por favor, selecione um utilizador para apagar.');
+        showPopupAlert('Por favor, selecione um utilizador para apagar.', 'error');
         return;
     }
 
     const username = selectedUser.value;
-    if (confirm(`Tem certeza de que deseja apagar o utilizador ${username}?`)) {
-        User.deleteUser(username);
-        loadUsersToTable();
-    }
+    Swal.fire({
+        title: `Tem certeza de que deseja apagar o utilizador ${username}?`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sim, apagar',
+        cancelButtonText: 'Cancelar',
+        customClass: {
+            popup: 'my-custom-popup',
+            title: 'my-custom-title',
+            content: 'my-custom-content',
+            confirmButton: 'my-custom-confirm-button',
+            cancelButton: 'my-custom-cancel-button'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            User.deleteUser(username);
+            loadUsersToTable();
+            showPopupAlert('Utilizador apagado com sucesso!', 'success');
+        }
+    });
 }
 
 function blockUser() {
     const selectedUser = document.querySelector('input[name="selectedUser"]:checked');
     if (!selectedUser) {
-        alert('Por favor, selecione um utilizador para bloquear.');
+        showPopupAlert('Por favor, selecione um utilizador para bloquear.', 'error');
         return;
     }
 
     const username = selectedUser.value;
-    if (confirm(`Tem certeza de que deseja bloquear o utilizador ${username}?`)) {
-        User.blockUser(username);
-        loadUsersToTable();
-    }
+    Swal.fire({
+        title: `Tem certeza de que deseja bloquear o utilizador ${username}?`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sim, bloquear',
+        cancelButtonText: 'Cancelar',
+        customClass: {
+            popup: 'my-custom-popup',
+            title: 'my-custom-title',
+            content: 'my-custom-content',
+            confirmButton: 'my-custom-confirm-button',
+            cancelButton: 'my-custom-cancel-button'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            User.blockUser(username);
+            loadUsersToTable();
+            showPopupAlert('Utilizador bloqueado com sucesso!', 'success');
+        }
+    });
 }
 
 function unblockUser() {
     const selectedUser = document.querySelector('input[name="selectedUser"]:checked');
     if (!selectedUser) {
-        alert('Por favor, selecione um utilizador para desbloquear.');
+        showPopupAlert('Por favor, selecione um utilizador para desbloquear.', 'error');
         return;
     }
 
     const username = selectedUser.value;
-    if (confirm(`Tem certeza de que deseja desbloquear o utilizador ${username}?`)) {
-        User.unblockUser(username);
-        loadUsersToTable();
-    }
+    Swal.fire({
+        title: `Tem certeza de que deseja desbloquear o utilizador ${username}?`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sim, desbloquear',
+        cancelButtonText: 'Cancelar',
+        customClass: {
+            popup: 'my-custom-popup',
+            title: 'my-custom-title',
+            content: 'my-custom-content',
+            confirmButton: 'my-custom-confirm-button',
+            cancelButton: 'my-custom-cancel-button'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            User.unblockUser(username);
+            loadUsersToTable();
+            showPopupAlert('Utilizador desbloqueado com sucesso!', 'success');
+        }
+    });
 }
 
 function sendMessage() {
     const selectedUser = document.querySelector('input[name="selectedUser"]:checked');
     if (!selectedUser) {
-        alert('Por favor, selecione um utilizador para enviar a mensagem.');
+        showPopupAlert('Por favor, selecione um utilizador para enviar a mensagem.', 'error');
         return;
     }
 
@@ -131,13 +195,13 @@ function sendMessage() {
     const message = messageContent.value;
 
     if (message.trim() === '') {
-        alert('Por favor, escreva uma mensagem.');
+        showPopupAlert('Por favor, escreva uma mensagem.', 'error');
         return;
     }
 
     // Enviar mensagem 
     User.sendMessage(username, message);
-    alert(`Mensagem enviada para ${username}: ${message}`);
+    showPopupAlert(`Mensagem enviada para ${username}: ${message}`, 'success');
     messageContent.value = ''; 
     messagePopup.style.display = 'none'; 
 }

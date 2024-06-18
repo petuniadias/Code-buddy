@@ -1,4 +1,4 @@
-import * as User from "./models/userModel.js";
+import * as User from "./models/userModel.js"; 
 
 document.addEventListener("DOMContentLoaded", function() {
     const openPopupBtn = document.getElementById('openPopup');
@@ -10,13 +10,27 @@ document.addEventListener("DOMContentLoaded", function() {
     const greeting = document.getElementById('greeting'); 
     const logoutBtn = document.getElementById('logoutBtn'); 
     const escapeBtn = document.querySelector('.escape_btn'); 
-    const popupAlert =document.getElementById('popup_challenge');
 
     // Esconder o dash do user 
     userPopup.style.display = 'none'; 
-    
+
     // Iniciar os users
     User.init(); 
+
+    function showPopupAlert(message, icon = 'success') {
+        return Swal.fire({
+            text: message,
+            icon: icon,
+            confirmButtonText: 'OK', 
+            customClass: {
+                popup: 'my-custom-popup',
+                title: 'my-custom-title',
+                content: 'my-custom-content',
+                confirmButton: 'my-custom-confirm-button',
+                cancelButton: 'my-custom-cancel-button'
+            }
+        });
+    }
 
     function checkLoginStatus() { 
         const loggedIn = User.isLogged();
@@ -29,13 +43,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.log(`Olá, ${currentUser.username}!`);
             }
             escapeBtn.addEventListener('click', function(event) {
-                // Permite a navegação para a página de escape room
+                // Permite a navegação para a escape room
                 window.location.href = "/codebuddy/html/escaperoom.html"; 
             });
         } else { 
             openPopupBtn.style.display = 'block'; 
             userIcon.style.display = 'none'; 
-            greeting.textContent = ''; // Limpar a saudação quando não estiver logado
+            greeting.textContent = ''; // Limpar a saudação 
             escapeBtn.removeEventListener('click', function(event) {
                 event.preventDefault();
             });
@@ -90,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 loginPopup.style.display = 'none';  
             }
         } catch (error) {
-            await showPopupAlert(error.message);
+            await showPopupAlert(error.message, 'error');
         }
     });
 
@@ -107,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
             registarPopup.style.display = 'none';
             loginPopup.style.display = 'block';
         } catch (error) {
-            await showPopupAlert(error.message);
+            await showPopupAlert(error.message, 'error');
         }
     }); 
 
@@ -141,25 +155,4 @@ document.addEventListener("DOMContentLoaded", function() {
         checkLoginStatus(); 
         userPopup.style.display = 'none';
     }); 
-
-    // alert popup  
-    
-    function showPopupAlert(message) {
-        return new Promise((resolve) => {
-            const popup = document.getElementById('popup_challenge');
-            const questionLabel = popup.querySelector('.question');
-            const closeButton = popup.querySelector('closePopupAlert');
-    
-            questionLabel.textContent = message;
-            popup.style.display = 'block';
-    
-            const handleClosePopup = () => {
-                popup.style.display = 'none';
-                closeButton.removeEventListener('click', handleClosePopup);
-                resolve();
-            };
-    
-            closeButton.addEventListener('click', handleClosePopup);
-        });
-    }
 });
