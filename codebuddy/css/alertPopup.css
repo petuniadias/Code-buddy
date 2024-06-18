@@ -4,11 +4,13 @@
     font-size: 15px; 
     border: none; 
     border-radius: 45px; 
-    color: black; 
+    color: black;  
+
 }  
 
 .my-custom-content { 
-    color: #F39414; 
+    color: #F39414;  
+   
 }  
 
 .swal2-container .swal2-styled.swal2-confirm {

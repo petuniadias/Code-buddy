@@ -43,18 +43,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.log(`Olá, ${currentUser.username}!`);
             }
             escapeBtn.addEventListener('click', function(event) {
-                // Permite a navegação para a escape room
                 window.location.href = "/codebuddy/html/escaperoom.html"; 
             });
-        } else { 
-            openPopupBtn.style.display = 'block'; 
-            userIcon.style.display = 'none'; 
-            greeting.textContent = ''; // Limpar a saudação 
-            escapeBtn.removeEventListener('click', function(event) {
+        } else {
+            openPopupBtn.style.display = 'block';
+            userIcon.style.display = 'none';
+            greeting.textContent = ''; // Limpar a saudação
+            escapeBtn.addEventListener('click', function (event) {
                 event.preventDefault();
+                showPopupAlert('Por favor, faça login para ter acesso a escape room.', 'warning');
             });
         }
     } 
+
+    checkLoginStatus();
 
     checkLoginStatus();
 
