@@ -1,0 +1,102 @@
+[
+    {
+        "tema": "light",
+        "cartoes": [
+            {
+                "link": "https://www.instagram.com/p/Cu1kXOyI78-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                "tipo": "Projecto de estágio",
+                "autor": "Diogo Gomes",
+                "projecto": "Aplicação de literacia financeira para crianças",
+                "media": {
+                    "img": "/codebuddy/images/diogogomes.png",
+                    "alt": "Diogo Gomes"
+                }
+            },
+            {
+                "link": "https://www.instagram.com/p/Cgl_YqIsZu-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                "tipo": "Projecto de estágio",
+                "autor": "Pedro Ermida",
+                "projecto": "Desenvolvimento de jogos de aventuras educativas",
+                "media": {
+                    "img": "/codebuddy/images/pedroermida.png",
+                    "alt": "Pedro Ermida"
+                }
+            }
+        ]
+    },
+    {
+        "tema": "dark",
+        "cartoes": [
+            {
+                "link": "https://www.esmad.ipp.pt/noticias/nuno-sousa-soma-mais-5-premios-internacionais",
+                "tipo": "+ de 10 prémios",
+                "autor": "Nuno Sousa",
+                "projecto": "Premiado com mais de 10 prémios internacionais",
+                "media": {
+                    "img": "/codebuddy/images/nunosousa1.png",
+                    "alt": "Nuno Sousa"
+                }
+            },
+            {
+                "link": "https://www.instagram.com/p/CvMqwW3oyln/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                "tipo": "20 valores",
+                "autor": "Inês Reis",
+                "projecto": "Primeira estudante da Licenciatura de TSIW a receber 20 valores no Projeto Final/Estágio.",
+                "media": {
+                    "img": "/codebuddy/images/inesreis.png",
+                    "alt": "Ines Reis"
+                }
+            }
+        ]
+    },
+    {
+        "tema": "dark",
+        "cartoes": [
+            {
+                "link": "https://www.instagram.com/p/CVz_8E-glBy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                "tipo": "Concursos Internacionais",
+                "autor": "",
+                "projecto": "Projetos de Estágio 2023",
+                "media": {
+                    "img": "/codebuddy/images/concursos.png",
+                    "alt": "Concursos"
+                }
+            },
+            {
+                "link": "https://www.instagram.com/p/CvKiFQhIxsl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                "tipo": "Projetos de Estágio 2023",
+                "autor": "",
+                "projecto": "Playlist dos Projetos de Estágio de TSIW 2023",
+                "media": {
+                    "video": "https://www.youtube.com/embed/3XyxjezbCNk?autoplay=1&amp;controls=0&amp;loop=1&amp;modestbranding=1",
+                    "alt": "Youtube"
+                }
+            }
+        ]
+    },
+    {
+        "tema": "light",
+        "cartoes": [
+            {
+                "link": "https://www.instagram.com/p/C5WT1vrMu3F/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+                "tipo": "Empregabilidade",
+                "autor": "Nuno Costa",
+                "projecto": "alumnus de TSIW, trabalha atualmente na MOG Technologies",
+                "media": {
+                    "img": "/codebuddy/images/nunocosta.png",
+                    "alt": "Nuno Costa"
+                }
+            },
+            {
+                "link": "https://www.esmad.ipp.pt/noticias/espaco-alumni-diogo-fernandes",
+                "tipo": "Empregabilidade",
+                "autor": "Diogo Fernandes",
+                "projecto": "alumnus de TSIW, trabalha atualmente na Blip",
+                "media": {
+                    "img": "/codebuddy/images/diogofernandes.png",
+                    "alt": "Diogo Fernandes"
+                }
+            }
+        ]
+    }
+]
