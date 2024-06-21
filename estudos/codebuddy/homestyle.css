@@ -1,0 +1,431 @@
+.header_container{ 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-size: 20px;  
+    padding: 20px; 
+    text-transform: capitalize; 
+    
+}  
+
+.underline{  
+    font-family: Jura; 
+    font-weight: bold; 
+    font-size: 64px;  
+    position: relative; 
+    display: inline-block;
+} 
+
+.underline::after{ 
+    content: ""; 
+    background-color: #F39414; 
+    z-index: -1; 
+    width: 100%; 
+    height: 77px; 
+    position: absolute; 
+    left: 0; 
+    bottom: -3px; 
+}
+
+.logo_container{ 
+    display: flex; 
+    align-items: center; 
+} 
+
+ .logo_name{ 
+    font-family: Kanit; 
+    font-weight: bolder;
+    text-transform: uppercase; 
+
+} 
+                          /* LOGIN */
+.login_btn{   
+    font-family: Space Mono ; 
+    font-style: normal;
+    border-style: solid;  
+    width: 315px; 
+    height: 75px; 
+    border-color: black ; 
+    background-color: white;
+    font-size: 24px;  
+    border-radius: 20px;    
+} 
+
+.login_btn:hover{ 
+    background-color:#969695 ; 
+    border-color: #969695;
+} 
+
+.popup_login {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
+    z-index: 9999; /* ensure it's above other content */
+} 
+
+.form{  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    position: absolute; 
+    justify-content: center;
+}
+
+.form_title{ 
+    font-family: Jura; 
+    font-weight: bold; 
+    font-size: 64px; 
+    margin: 10%;
+} 
+
+
+.form_box{   
+    font-size: 24px; 
+    margin: 5%;
+    width: 400px; 
+    height: 50px; 
+    border-radius: 20px;  
+    background-color: #D9D9D9;  
+    border-color: #D9D9D9;
+    border-style: solid;  
+    color: black; 
+    font-family: Space Mono; 
+}
+
+.popup_content {
+    background-color: white;
+    border: 1px solid #ccc; 
+    border-radius: 68px;
+    width: 149px;
+    padding: 289px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+} 
+
+.form_btns{  
+    display: flex; 
+    
+} 
+
+.form_btn{ 
+    background-color: black; 
+    color: white; 
+    font-family: Space Mono; 
+    font-weight: regular; 
+    font-size: 24px; 
+    width: 200px; 
+    height: 50px;   
+    border-radius: 20px; 
+    margin-left: 5%; 
+    
+}
+
+/* Close button */
+.close_login { 
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);   
+    position: absolute;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold; 
+    border-radius: 50%;  
+    border-style: solid; 
+    border-color: #D9D9D9;
+    background-color: #D9D9D9;
+}
+
+.close_login:hover,
+.close_login:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+                     /* TITLE E IMG */
+.title_container{ 
+    display: flex;    
+    align-items: center;  
+    justify-content: space-between;  
+    padding-top: 5%; 
+    padding-left: 10%;  
+    padding-right: 10%;
+    padding-bottom: 5%;
+   
+}  
+
+.titles{   
+    font-family: jura;  
+    text-align: center;
+}
+
+.title_1{  
+    font-size: 130px;  
+    margin: 0;  
+    text-transform: uppercase;  
+} 
+
+.title_2{  
+    margin: 0;
+    font-size:30px;   
+}  
+
+.elements{ 
+    margin-left: 20px;
+} 
+
+                         /* ACCORDIAN */
+
+.accordion_container {
+    flex-direction: row; 
+    display: flex;
+    justify-content: space-evenly; 
+    
+}
+
+.accordion{  
+   font-family: Space Mono;  
+   font-style: normal;  
+   padding-bottom: 5%; 
+          
+}  
+
+.accordion_btn{  
+    border-style: solid;  
+    border-radius:20px; 
+    color: white;  
+    background-color: black;
+    width: 300px; 
+    height: 65px; 
+    font-family: Space Mono;  
+    font-style: normal;   
+    font-size: 24px; 
+    margin: 0;
+} 
+.accordion_btn:hover{ 
+    background-color:#969695 ; 
+    border-color: #969695;
+}
+
+.content{  
+    margin-top: 3%; 
+    margin-left: 10%; 
+    margin-right: 10%;  
+    display: none; 
+    font-size: 30px   
+}
+
+.active{ 
+    display: block;
+} 
+
+.close_btn{ 
+    border-style: solid; 
+    border-radius: 50%; 
+    border-color: #D9D9D9; 
+    background-color: #D9D9D9;  
+    margin-bottom: 3%;
+} 
+
+                     /* GALERIA */
+
+.events_container{ 
+    display: flex; 
+    align-items: baseline;   
+    padding-left: 5%;
+    
+}  
+
+.events_titles{  
+    font-family: Jura; 
+    font-size: 50px; 
+    font-weight: bold; 
+    position: relative; 
+    background-color: #F39414;
+} 
+
+
+.events_content{ 
+    padding-left: 5%;  
+    font-family: Space Mono; 
+    font-size: 24px; 
+}  
+
+.feed{   
+    padding-left: 5%;
+    display: grid;  
+    grid-auto-flow: column; 
+    grid-auto-columns: 48%; 
+    overflow-x: auto; 
+    overscroll-behavior-inline:contain ; 
+    padding-bottom: 5%; 
+    scrollbar-width: none; /* Oculta a barra  no Firefox */
+    -ms-overflow-style: none; /* Oculta a barra no Internet Explorer e Edge */
+}
+ 
+.feed::-webkit-scrollbar {
+    display: none; /* Oculta a barra no Chrome e Safari */
+}
+ 
+.projects{ 
+    padding: 5%; 
+    display: grid; 
+    padding: 5%;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0); 
+}  
+
+                          /* ESCAPE ROOM */
+
+.escaperom_container{   
+    position: relative;
+    border-radius: 25px;
+    background: #D9D9D9;
+    width: 90%;
+    height: 502px; 
+    margin: 5% auto;
+} 
+
+.escape_info{   
+    margin: 5%;    
+    text-align:left; 
+} 
+
+.escape_title{ 
+    font-family: Jura; 
+    font-size: 50px; 
+    font-weight: bold; 
+    position: relative; 
+    background-color: #F39414;
+} 
+
+
+.escape_content{ 
+    font-family: Space Mono;  
+    font-size: 24px; 
+} 
+
+.escape_btn{ 
+    border-style: solid; 
+    background-color: #F39414; 
+    color: white; 
+    border-color: #F39414; 
+    border-radius: 20px; 
+    width: 229px; 
+    height: 75px; 
+    font-size: 24px; 
+    font-family: Space Mono; 
+    margin: 10px auto; 
+    font-family: Jura; 
+    font-weight: bold;
+}  
+
+.escape_btn:hover{ 
+    background-color:#969695 ; 
+    border-color: #969695;
+}
+
+.all_info{  
+    position: relative;  
+    display: flex; 
+    text-align: center; 
+    margin: 0 auto; 
+    padding: 20px;
+} 
+
+.escape_img{  
+   margin-right: 5%;    
+    width: 450px; 
+    height: 386px;  
+} 
+
+                             /* FOOTER */
+.footer_part1{  
+    padding: 5%;
+    display: flex; 
+    background-color: #969695; 
+    margin: 0;
+} 
+
+.circle{ 
+    border-style: solid; 
+    border-radius: 50%; 
+    background-color: white; 
+    width: 200px; 
+    height: 200px; 
+    border-color: white; 
+    font-size: 45px; 
+    font-family: Jura; 
+    font-weight: bold;   
+    display: flex; 
+    justify-content: center; 
+    align-items: center;  
+}  
+
+.info_part1{ 
+    padding-left: 10%; 
+    font-size: 24px; 
+    font-family: Space Mono; 
+    color: white;
+} 
+
+.footer_menu{
+    font-family: Space Mono; 
+    font-weight: bold;  
+    text-transform: uppercase; 
+    font-size: 24px;
+}
+
+.logo_footer{ 
+    margin-left: auto;
+}
+
+
+
+.footer_part2{ 
+    background-color: #D9D9D9; 
+    margin: 0; 
+    display: flex; 
+    padding: 5%;
+} 
+
+.contacts_label{ 
+    font-family: Space Mono;  
+    font-weight: bold;
+    font-size: 24px; 
+    text-transform: uppercase; 
+} 
+.contacts_info{ 
+    font-family: Space Mono;  
+    font-size: 24px;  
+} 
+ 
+.contacts{ 
+    margin-right: 25%;
+}
+
+.footer_part3{ 
+    background-color: black; 
+    height: 70px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

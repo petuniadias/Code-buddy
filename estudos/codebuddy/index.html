@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code buddy</title> 
+    <link rel="stylesheet" href="./homestyle.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap"rel="stylesheet"  />  
+    <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>  
+    <link href='https://fonts.googleapis.com/css?family=Space Mono' rel='stylesheet'>
+
+
+</head>
+<body> 
+    <div class="header_container"> 
+        <div class="logo_container">  
+            <img src="./images/header_logo.png" alt="logo" class="logo"> 
+        </div> 
+    
+         <button class="login_btn" id="openPopup">Login/Registar</button>           
+    </div>  
+    <div id="loginPopup" class="popup_login">
+        <div class="popup_content"> 
+            <button class="close_login"  id="closePopup"><img src="./images/popup_close.png" alt=""></button>
+            <br>
+            <form  class="form" method="post"> 
+               <label class="underline" for="">Login/Registar</label>
+                <input class="form_box" type="text" placeholder="Username" name="username" required><br> 
+                <input class="form_box" type="text" placeholder="Email" name="email"><br>
+                <input class="form_box" type="password" placeholder="Password" name="password" required><br>
+                <div class="form_btns"> 
+                    <button class="form_btn" type="submit">Login</button>  
+                    <button class="form_btn" type="add">Registar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    
+    
+    <div class="title_container">  
+        <div class="titles"> 
+            <h1 class="title_1">tswi</h1> 
+            <h2 class="title_2">Licenciatura em Tecnologias e Sistemas <br> de Informação Para Web  </h2>
+        </div> 
+        <div class="elements">
+            <img src="./images/elements_1.png" alt="">
+        </div>
+    </div> 
+
+
+                         <!-- ACCORDIAN PART -->
+<div class="accordion_container"> 
+    <div class="accordion"> 
+        <button class="accordion_btn">Apresentação</button>  
+        <div class="content"> 
+            <p> What is Lorem Ipsum?
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> 
+            <button class="close_btn"><img src="./images/seta.png" alt=""></button> 
+        </div> 
+
+        <button class="accordion_btn">Plano de estudos</button> 
+        <div class="content">  
+            <p> What is Lorem Ipsum?
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> 
+            <button class="close_btn"><img src="./images/seta.png" alt=""></button> 
+        </div> 
+
+        <button class="accordion_btn">Saídas Proficionais</button>  
+        <div class="content"> 
+            <p> What is Lorem Ipsum?
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> 
+            <button class="close_btn"><img src="./images/seta.png" alt=""></button> 
+        </div> 
+
+        <button class="accordion_btn">Acesso</button> 
+        <div class="content"> 
+            <p> What is Lorem Ipsum?
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> 
+            <button class="close_btn"><img src="./images/seta.png" alt=""></button> 
+        </div> 
+
+        <button class="accordion_btn">+ Info</button> 
+        <div class="content"> 
+            <p> What is Lorem Ipsum?
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> 
+            <button class="close_btn"><img src="./images/seta.png" alt=""></button> 
+        </div>
+    </div> 
+</div> 
+    
+                        <!-- Galeria / Não é em feed para o lado é tocar -->
+    <div class="events_container">  
+        <label for=""  class="events_titles">Trabalhos e eventos</label> 
+        <p class="events_content">Trabalhos práticos e eventos relevantes do curso</p>
+    </div>  
+            <!-- adicionar os popup's e botões -->
+
+    <style>
+/* begin styles code for SlideShow */
+#slideshow-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    z-index: 1000;
+    overflow: hidden;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#slideshow-container .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    justify-content: space-around;
+    position: relative;
+    z-index: -1000;
+    margin-left: 0;
+}
+ 
+#slideshow-container .slide {
+    width: 100%;
+    height: 300px;
+    background-color: #cecece;
+    border: 4px solid #000;
+    border-radius: 30px;
+    padding: 20px;
+    border-right: 10px solid #000;
+    border-bottom: 10px solid #000;
+}
+
+#slideshow-container .slide:not(.visible) {
+    cursor: pointer;
+}
+
+#slideshow-container .slide:not(.visible):hover {
+    filter: drop-shadow(2px 4px 6px black);
+}
+/* end styles code for SlideShow */
+    </style>
+
+    <!-- slideshow -->
+    <!--
+        cd Code-buddy
+        python3 -m http.server -d codebuddy
+        chrome: http://localhost:8000/
+    -->
+    <div id="slideshow-container">
+        <ul class="row">
+            <li data-id="1" class="slide">1/5</li>
+            <li data-id="2" class="slide" style="background-color: #0000007c;">2/5</li>
+            <li data-id="3" class="slide">3/5</li>
+            <li data-id="4" class="slide" style="background-color: #0000007c;">4/5</li>
+            <li data-id="5" class="slide">5/5</li>
+        </ul>
+        <ul class="row">
+            <li data-id="1" class="slide" style="background-color: #000;">&nbsp;</li>
+            <li data-id="2" class="slide">&nbsp;</li>
+            <li data-id="3" class="slide" style="background-color: #000;">&nbsp;</li>
+            <li data-id="4" class="slide">&nbsp;</li>
+            <li data-id="5" class="slide" style="background-color: #000;">&nbsp;</li>
+        </ul>
+    </div>
+
+<script>
+
+// begin js code for SlideShow
+const slideShowConf = {
+    "visible": 2,
+    "offset": 60 // =60px best with 40 ;-)
+}
+
+let savedPosition = 0;
+
+function showSlide(element, position) {
+
+    if (element.classList.contains('visible')) {
+        return;
+    }
+
+    const slides = element.parentNode.querySelectorAll('.slide');
+    for (const slide of slides) {
+        slide.classList.remove('visible');
+    }
+
+    if (position < savedPosition) {
+        position += (slideShowConf['visible'] - 1);
+    }
+
+    // add class visible to slides in viewport
+    for (let i = 1; i <= slideShowConf['visible']; i++) {
+        slides[position-i].classList.add('visible');
+    }
+
+    const margin = (() => {
+        if (position > slideShowConf['visible']) {
+            const currentWidth = parseInt(element.parentNode.style.width, 10);
+            return (((currentWidth / slides.length) * (position - slideShowConf['visible'])) - slideShowConf['offset']) * -1;
+        }
+        return slideShowConf['offset'];
+    })();
+
+    element.parentNode.style.marginLeft = `${margin}px`;
+    element.parentNode.style.transition = "all 1s ease-in-out";
+
+    savedPosition = position;
+}
+
+function slideShowManager(resize = false) {
+
+    if (slideShowConf['visible'] === 0) {
+        console.error('At least 1 slides are required!');
+        return;
+    }
+
+    savedPosition = 0;
+
+    const viewportWidth = window.innerWidth;
+    const slideshow = document.getElementById("slideshow-container");
+
+    const rows = slideshow.querySelectorAll('.row');
+    for (const row of rows) {
+        const slides = row.querySelectorAll('.slide');
+        if (slides.length < slideShowConf['visible']) {
+            console.error(`At least ${slideShowConf['visible']} slides are required!`);
+            break;
+        }
+
+        // total width of row with n visible slides without scroll
+        const innerRowWidth = (((document.body.clientWidth - slideShowConf['offset'] * 2) / slideShowConf['visible']) * slides.length);
+        row.style.width = `${innerRowWidth}px`;
+        row.style.marginLeft = `${slideShowConf['offset']}px`;
+
+        let count = 1;
+        for (const slide of slides) {
+            if (!resize) {
+                slide.addEventListener('click', (event) => {
+                    const position = parseInt(event.currentTarget.dataset.id, 10);
+                    showSlide(event.currentTarget, position);
+                });
+            }
+
+            if (count <= slideShowConf['visible']) {
+                slide.classList.add('visible');
+            } else {
+                slide.classList.remove('visible');
+            }
+            count++;
+        }
+    }
+}
+
+window.addEventListener("resize", (event) => {
+    slideShowManager(true);
+});
+
+slideShowManager();
+// end js code for SlideShow
+
+</script>
+
+
+   <div class="feed"> 
+        <div class="projects"> 
+            <img src="./images/projeto_1.png" alt=""> 
+            <br><br><br><br><br><br><br>
+            <img src="./images/projeto_2.png" alt=""> 
+        </div>   
+        <div class="projects"> 
+            <img src="./images/projeto_2.png" alt="">  
+            <br><br><br><br><br><br><br> 
+            <img src="./images/projeto_1.png" alt="">
+        </div>  
+        <div class="projects"> 
+            <img src="./images/projeto_1.png" alt=""> 
+            <br><br><br><br><br><br><br> 
+            <img src="./images/projeto_2.png" alt=""> 
+        </div>  
+        
+   </div>  
+
+                     <!-- ecaperoom --> 
+   <div class="escaperom_container">  
+    <div class="all_info"> 
+        <div class="escape_info">  
+            <label for="" class="escape_title">Testa o teu conhecimento de forma divertida</label>
+            <p class="escape_content">Aqui, encontrará uma escape room repleta de pequenos desafios intimamente  ligados ao curso.</p> 
+            <a href="http://127.0.0.1:5500/Escape%20Room/index.html"><button class="escape_btn">Escape room</button> </a>  
+            
+        </div> 
+        <img class="escape_img" src="./images/escaperoom_elem.png" alt="">
+    </div>
+   </div>  
+
+                     <!-- FOOTER -->
+
+   <footer> 
+    <div class="footer_container"> 
+       <div class="footer_part1">  
+            <label for="" class="circle">Get in touch!</label>
+            <div class="info_part1">  
+                <h1 class="footer_menu">Menu</h1> 
+                <p>Apresentação</p> 
+                <p>Planos de estudo</p> 
+                <p>Saídas Profissionais</p> 
+                <p>Acesso</p> 
+                <p>+ info</p> 
+            </div> 
+            <div class="logo_footer">  
+                <img  src="./images/logo_footer.png" alt="">
+            </div>
+       </div> 
+
+        <div class="footer_part2"> 
+            <div class="contacts"> 
+                <label for="" class="contacts_label">Email</label> 
+                <p class="contacts_info">geral @esmad.ipp.pt</p>
+            </div> 
+            <div class="contacts"> 
+                <label class="contacts_label" for="">TELEMÓVEL</label> 
+                <p class="contacts_info">253291700</p>
+            </div>
+        </div>   
+
+       <div class="footer_part3"> 
+       </div>
+
+    </div>
+   </footer>
+
+  <script src="./home.js"></script>  
+  <script src="./eventos.js"></script>  
+</body>
+</html> 
+
+
+
+<!-- colocar o texto dos btn por debaixo -->

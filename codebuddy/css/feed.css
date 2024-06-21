@@ -1,18 +1,19 @@
     /* GALERIA */
 
 .events_container{ 
-    display: flex; 
-    align-items: baseline;   
-    padding-left: 5%;  
-    
+    display: flex;
+    align-items: baseline;
+    padding: 5%;
+    flex-wrap: wrap;
 }  
 
-.events_titles{  
+.events_titles{
+    display: block;
     font-family: Jura; 
     font-size: 50px; 
     font-weight: bold; 
-    position: relative; 
     background-color: #F39414;
+    padding: 4px;
 } 
 
 
@@ -47,4 +48,10 @@
 
 .proj_img{ 
     height: 400px;
+}
+
+@media (min-width: 768px) {
+    .events_container{
+        flex-wrap: nowrap;
+    }
 }

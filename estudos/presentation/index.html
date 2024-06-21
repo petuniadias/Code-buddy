@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Presentation</title>
+
+<style>
+body {
+    margin: 20px;
+    font-family: sans-serif;
+}
+
+#project-show {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+    min-width: 400px;
+}
+
+#project-show > .slide {
+    display: block;
+    width: calc(50% - (20px / 2));
+    position: relative;
+} 
+
+#project-show .content {
+    display: none;
+    margin: 0;
+    overflow: hidden;
+    height: calc(250px - 10px * 2 - 10px);
+    border: 2px solid #000;
+    border-right-width: 8px;
+    border-bottom-width: 8px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#project-show .dark .content {
+    color: #fff;
+    background-color: #161616;
+}
+
+#project-show .content > h1 {
+    margin: 0;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#project-show .loop-arrow {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    z-index: 100;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(1px 1px 1px black);
+}
+
+#project-show .dark .loop-arrow {
+    background-color: #f5f5f5;
+    filter: drop-shadow(1px 1px 1px white);
+}
+
+#project-show .dark .loop-arrow svg {
+    filter: invert(1);
+}
+
+#project-show .loop-arrow:hover {
+    filter: none;
+    opacity: 0.8;
+    margin-right: -1px;
+    margin-bottom: -1px;
+}
+
+#project-show .loop-arrow > svg {
+    width: 24px;
+    height: 24px;
+}
+
+#project-show .content.active {
+    display: block;
+    animation: fadeIn 2.0s;
+}
+
+#project-show .content.desacative {
+    /* display: none; */
+    animation: fadeOut 2.0s;
+}
+
+@keyframes fadeOut {
+    from {
+        display: block;
+        opacity: 0.75;
+        transform: rotateY(0);
+    }
+    to {
+        display: none;
+        opacity: 0.0;
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.0;
+        transform: rotateY(180deg);
+    }
+    to {
+        opacity: 1.0;
+        transform: rotateY(360deg);
+    }
+}
+
+
+</style>
+</head>
+<body>
+
+    <head>
+        <h1>Projectos</h1>
+        <!-- add here the menu -->
+    </head>
+
+    <main>
+
+        <ul id="project-show">
+            <li class="slide">
+                <div class="content">
+                    <h1>Projecto A/1</h1>
+                </div>
+                <div class="content">
+                    <h1>Projecto A/2</h1>
+                </div>
+                <div class="content">
+                    <h1>Projecto A/3</h1>
+                </div>
+                <span class="loop-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="white" d="M12.089 3.634A2 2 0 0 0 11 5.414L10.999 8H6a1 1 0 0 0-1 1v6l.007.117A1 1 0 0 0 6 16l4.999-.001l.001 2.587A2 2 0 0 0 14.414 20L21 13.414a2 2 0 0 0 0-2.828L14.414 4a2 2 0 0 0-2.18-.434zM3 8a1 1 0 0 1 .993.883L4 9v6a1 1 0 0 1-1.993.117L2 15V9a1 1 0 0 1 1-1"/>
+                    </svg>
+                </span>
+            </li>
+            <li class="slide dark">
+                <div class="content">
+                    <h1>Projecto B/1</h1>
+                </div>
+                <div class="content">
+                    <h1>Projecto B/2</h1>
+                </div>
+                <div class="content">
+                    <h1>Projecto B/3</h1>
+                </div>
+                <span class="loop-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="white" d="M12.089 3.634A2 2 0 0 0 11 5.414L10.999 8H6a1 1 0 0 0-1 1v6l.007.117A1 1 0 0 0 6 16l4.999-.001l.001 2.587A2 2 0 0 0 14.414 20L21 13.414a2 2 0 0 0 0-2.828L14.414 4a2 2 0 0 0-2.18-.434zM3 8a1 1 0 0 1 .993.883L4 9v6a1 1 0 0 1-1.993.117L2 15V9a1 1 0 0 1 1-1"/>
+                    </svg>
+                </span>
+            </li>
+            <li class="slide dark">
+                <div class="content">
+                    <h1>Projecto C/1</h1>
+                </div>
+                <div class="content">
+                    <h1>Projecto C/2</h1>
+                </div>
+                <div class="content">
+                    <h1>Projecto C/3</h1>
+                </div>
+                <span class="loop-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="white" d="M12.089 3.634A2 2 0 0 0 11 5.414L10.999 8H6a1 1 0 0 0-1 1v6l.007.117A1 1 0 0 0 6 16l4.999-.001l.001 2.587A2 2 0 0 0 14.414 20L21 13.414a2 2 0 0 0 0-2.828L14.414 4a2 2 0 0 0-2.18-.434zM3 8a1 1 0 0 1 .993.883L4 9v6a1 1 0 0 1-1.993.117L2 15V9a1 1 0 0 1 1-1"/>
+                    </svg>
+                </span>
+            </li>
+            <li class="slide">
+                <div class="content">
+                    <h1>Projecto D/1</h1>
+                </div>
+                <div class="content">
+                    <h1>Projecto D/2</h1>
+                </div>
+                <div class="content">
+                    <h1>Projecto D/3</h1>
+                </div>
+                <span class="loop-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="white" d="M12.089 3.634A2 2 0 0 0 11 5.414L10.999 8H6a1 1 0 0 0-1 1v6l.007.117A1 1 0 0 0 6 16l4.999-.001l.001 2.587A2 2 0 0 0 14.414 20L21 13.414a2 2 0 0 0 0-2.828L14.414 4a2 2 0 0 0-2.18-.434zM3 8a1 1 0 0 1 .993.883L4 9v6a1 1 0 0 1-1.993.117L2 15V9a1 1 0 0 1 1-1"/>
+                    </svg>
+                </span>
+            </li>
+        </ul>
+
+    </main>
+
+<script>
+
+function nextContent(currentTarget) {
+    const slide = currentTarget.closest(".slide");
+    const contents = slide.querySelectorAll('.content');
+    if (contents.length == 1) {
+        return;
+    }
+
+    let active = 0;
+    for (let i = 0; i < contents.length; i++) {
+        if (contents[i].classList.contains('desacative')) {
+            contents[i].classList.remove('desacative');
+        }
+
+        if (contents[i].classList.contains('active')) {
+            active = i;
+            contents[i].classList.remove('active');
+            contents[i].classList.add('desacative');
+            // break;
+        }
+    }
+
+    active++;
+    if (active == contents.length) {
+        active = 0;
+    }
+
+    setTimeout(() => {
+        contents[active].classList.add('active');
+    }, 2000); // it has to be the same as the animation time to work
+    // contents[active].classList.add('active');
+}
+
+function projectManager() {
+
+    const projects = document.getElementById("project-show");
+
+    const arrows = projects.querySelectorAll('.loop-arrow');
+    for (const arrow of arrows) {
+        arrow.addEventListener('click', (event) => {
+            nextContent(event.currentTarget);
+        });
+        arrow.parentElement.children[0].classList.add('active');
+    }
+}
+
+projectManager();
+</script>
+
+</body>
+</html>

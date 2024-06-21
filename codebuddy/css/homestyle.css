@@ -6,13 +6,20 @@ body{
 
 .header_container{ 
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    font-size: 20px;  
-    padding: 20px; 
-    text-transform: capitalize; 
-    
-}  
+    font-size: 20px;
+    padding: 20px;
+    text-transform: capitalize;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header_container .logo {
+    width: 100%;
+    height: auto;
+    object-fit: scale-down;
+}
 
 .underline{  
     font-family: Jura; 
@@ -49,14 +56,13 @@ body{
 
                      /* TITLE E IMG */
 .title_container{ 
-    display: flex;    
-    align-items: center;  
-    justify-content: space-between;  
-    padding-top: 5%; 
-    padding-left: 10%;  
-    padding-right: 10%;
-    padding-bottom: 5%;
-   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10% 5%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 40px;
 }  
 
 .titles{   
@@ -65,7 +71,7 @@ body{
 }
 
 .title_1{  
-    font-size: 130px;  
+    font-size: 100px;  
     margin: 0;  
     text-transform: uppercase;  
 } 
@@ -79,17 +85,29 @@ body{
     margin-left: 20px;
 } 
 
+.elements img { 
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    object-fit: scale-down;
+} 
 
-
+@media (min-width: 768px) {
+    .title_container{
+        flex-wrap: nowrap;
+        padding: 5%;
+    }
+    .title_1{
+        font-size: 130px;
+    }
+}
 
                           /* ESCAPE ROOM */
 
 .escaperom_container{   
-    position: relative;
     border-radius: 25px;
     background: #D9D9D9;
     width: 90%;
-    height: 502px; 
     margin: 5% auto;
 } 
 
@@ -98,18 +116,19 @@ body{
     text-align:left; 
 } 
 
-.escape_title{ 
-    font-family: Jura; 
-    font-size: 50px; 
-    font-weight: bold; 
-    position: relative; 
+.escape_title{
+    display: block;
+    padding: 4px;
+    font-family: Jura;
+    font-size: 34px;
+    font-weight: bold;
     background-color: #F39414;
 } 
 
 
 .escape_content{ 
     font-family: Space Mono;  
-    font-size: 24px; 
+    font-size: 20px; 
 } 
 
 .escape_btn{  
@@ -133,26 +152,43 @@ body{
     border-color: #969695;
 }
 
-.all_info{  
-    position: relative;  
-    display: flex; 
-    text-align: center; 
-    margin: 0 auto; 
+.all_info{
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
     padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 } 
 
 .escape_img{  
-   margin-right: 5%;    
-    width: 450px; 
-    height: 386px;  
-} 
+    margin-right: 5%;
+    width: 90%;
+    height: auto;
+    object-fit: scale-down;
+}
+
+@media (min-width: 768px) {
+    .all_info {
+        flex-wrap: nowrap;
+    }
+    .escape_title{
+        font-size: 50px;
+    }
+    .escape_content{
+        font-size: 24px; 
+    } 
+}
 
                              /* FOOTER */
-.footer_part1{  
+.footer_part1{
     padding: 5%;
-    display: flex; 
-    background-color: #969695; 
+    display: flex;
+    background-color: #969695;
     margin: 0;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
 } 
 
 .circle{ 
@@ -172,22 +208,34 @@ body{
 }  
 
 .info_part1{ 
-    padding-left: 10%; 
     font-size: 24px; 
     font-family: Space Mono; 
     color: white; 
     
 } 
 
-.footer_menu{
+.footer-menu-title {
     font-family: Space Mono; 
     font-weight: bold;  
     text-transform: uppercase; 
     font-size: 24px;
 }
 
-.logo_footer{ 
-    margin-left: auto;
+.footer-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo_footer img { 
+    width: 100%;
+    height: auto;
+    object-fit: scale-down;
 }
 
 
@@ -196,9 +244,10 @@ body{
     background-color: #D9D9D9; 
     margin: 0; 
     display: flex; 
-    padding-top: 5%; 
-    padding-bottom: 5%; 
+    padding: 5%;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 } 
 
 .contacts_label{ 
@@ -213,13 +262,11 @@ body{
 } 
  
 .contacts{ 
-    margin-left:5%;
+
 } 
 
 .logo_esmad{ 
-    float: right; 
-    height: 200px; 
-    margin-right: 3% ;
+
 }
 
 .footer_part3{ 
@@ -228,7 +275,21 @@ body{
 }
 
 
-
+@media (min-width: 768px) {
+    .footer_part1 {
+        justify-content: space-between;
+    }
+    .footer_part2 > div {
+        width: calc((100% / 3) - (20px * 3));
+        text-align: center;
+    }
+    .footer_part2 > div:first-child {
+        text-align: left;
+    }
+    .footer_part2 > div:last-child {
+        text-align: right;
+    }
+}
 
 
 
